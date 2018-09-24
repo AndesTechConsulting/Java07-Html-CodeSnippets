@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18.09.2018, 19:52:26
+    Author     : and
+*/
+
+.shadow {
+-moz-box-shadow: 10px 0px 15px -3px silver;
+-webkit-box-shadow: 4px 0px 10px -3px silver;
+box-shadow: 10px 0px 15px -3px lightgreen;
+}
+
+.slider-wrapper {
+  display: inline-block;
+  width: 300px;
+  height: 20px;
+  padding: 0;
+  border: 2px lightgreen solid;
+  box-shadow: 10px  bisque;
+}
+
+button, input, select, textarea, label {
+  font-family : inherit;
+  font-size   : 100%;
+  padding: 3px;
+  /*width : 150px;*/
+  margin: 3px;
+
+}
+table#table_new_user td.labels {
+  text-align: right;
+}
+
+fieldset{
+    
+   width: 350px; 
+}

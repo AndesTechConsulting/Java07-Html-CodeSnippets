@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/mystyles1.css" rel="stylesheet" type="text/css"/>
         <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+        <script src="js/utils.js" type="text/javascript"></script>
     </head>
    
     <body>
@@ -21,7 +22,7 @@
 <h1>Добавление нового пользователя</h1>
 
 
-<form name="newCustomer" title="New Customer" id="nc" onsubmit="" >
+<form name="newCustomer" title="New Customer" id="nc" onsubmit="return saveToLocalStorage(event);" >
     <fieldset> <legend > Add new customer </legend>
         
     <table  id="table_new_user">  
@@ -40,7 +41,7 @@
 
             <tr><td  class="labels">  Соц. группа:  </td>
             <td> 
-                <select id="group_selector">
+                <select id="group_selector" name="Соц.группа">
                     <option value="pens">пенсионер </option>
                     <option value="gserv">гос.служащий </option>
                     <option value="ooo">предприниматель </option>
@@ -49,6 +50,7 @@
                     <option value="com">сотрудник компании</option>
                     <option value="war">военослужащий</option>
                     <option value="wpens">воен. пенсионер</option>
+                    <option value="wpens">оппозиционер</option>
 <!--                    <option value="wpens">bla bla bla</option>-->
                 </select>
             
@@ -63,17 +65,17 @@
                         /> </td> <tr>
         
         <tr><td  class="labels">  Пароль:  </td>
-            <td> <input id = "pass" type="password"   value="" required 
+            <td> <input id = "pass" type="password" name="password"  value="" required 
              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Пароль не соответствует требованиям безопасности!!"/> </td> <tr>    
          
          <tr><td  class="labels">  Роль:  </td>
              <td> <span>
                     <label for="admin_rad">Admin</label>    
-                <input type="radio" name="g1" id="admin_rad" /> 
+                    <input type="radio" name="role" value="admin" id="admin_rad" /> 
                 </span>
                  <span>
                    <label for="user_rad">User</label> 
-                <input type="radio" name="g1"  id="user_rad" checked/>
+                   <input type="radio" name="role"  value="user" id="user_rad" checked/>
                 </span>
             </td> <tr>    
             

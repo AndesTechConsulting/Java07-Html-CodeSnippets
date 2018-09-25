@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/mystyles1.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+        <script src="js/utils.js" type="text/javascript"></script>
+    </head>
+   
+    <body>
+        <header title="h_menu" style="background-color: lightblue;">
+<nav>
+<div>
+    
+</div>
+</nav>
+</header>
+        
+     <form name="Login" title="Login" id="login" onsubmit="" method="post">
+         <fieldset class="login_page"> <legend > Login </legend>
+        
+    <table  id="table_new_user">  
+        
+        <tr><td  class="labels">  Логин:  </td>
+            <td> <input id = "login" type="text"  name="login" value="" required 
+                        pattern="^[a-zA-Z]{1}\w{4,12}"
+                        /> </td> <tr>
+        
+        <tr><td  class="labels">  Пароль:  </td>
+            <td> <input id = "pass" type="password" name="password"  value="" required 
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Пароль не соответствует требованиям безопасности!!"/> </td> <tr>    
+         
+                     
+        <tr ><td colspan="2">
+                <input type="submit" name="submit" value="Login">   </td></tr>
+        <tr ><td colspan="2">
+                <input type="reset" name="reset" value="Очистить форму"/> </td></tr>
+    </table>
+    </fieldset>
+</form>
+        
+        <div id="sub"></div>
+        <script> $("#sub").load("menu_sub.html"); </script>
+        
+</body>
+
+</html>

@@ -41,11 +41,11 @@
 
             <tr><td  class="labels">  Соц. группа:  </td>
             <td> 
-                <select id="group_selector" name="Соц.группа">
+                <select id="group_selector" name="Соц.группа" >
                     <option value="pens">пенсионер </option>
                     <option value="gserv">гос.служащий </option>
                     <option value="ooo">предприниматель </option>
-                    <option value="stu">студент </option>
+                    <option value="stu" selected>студент </option>
                     <option value="free">безработный </option>
                     <option value="com">сотрудник компании</option>
                     <option value="war">военослужащий</option>
@@ -57,7 +57,7 @@
             </td> <tr>
     
         <tr> <td class="labels"> Возраст: </td>
-            <td> <input id = "age" type="number" name="age" min="15" max="95" step="1" value="25"/> </td> </tr>
+            <td> <input id = "age" type="number" name="age" min="15" max="95" step="1" value="20"/> </td> </tr>
         
         <tr><td  class="labels">  Логин:  </td>
             <td> <input id = "login" type="text"  name="login" value="" required 
@@ -88,13 +88,8 @@
 </form>
 
 
-<footer title="menu" style="background-color: lightblue;">
-<nav>
-<div>
-    
-</div>
-</nav>
-</footer>
+ <div id="sub"></div>
+ <script> $("#sub").load("menu_sub.html"); </script>
         
 </body>
 

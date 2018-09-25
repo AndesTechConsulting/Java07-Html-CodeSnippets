@@ -43,7 +43,6 @@ function saveToLocalStorage(evt){
     }
     else{
         localStorage.setItem(login, JSON.stringify(arr2));}
-        
     
 }
 

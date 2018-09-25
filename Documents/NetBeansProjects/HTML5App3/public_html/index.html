@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Test web </title>
+        <title class="hg">Test web </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/mystyles1.css" rel="stylesheet" type="text/css"/>
@@ -9,8 +9,8 @@
     </head>
    
     <body>
-        <h1 class="shadow">Это тестовый сайт.</h1>
-        <h1 class="shadow">Знакомство с разметкой html.</h1>
+        <h1 class="shadow" id="mainTitle" style="color: #0f0f0A;">Это тестовый сайт.</h1>
+        <h1 class="shadow" >Знакомство с разметкой html.</h1>
 <!--        <div>TODO write content</div>-->
         <code >
             
@@ -18,21 +18,22 @@
         </code>
 <details class="slider-wrapper">
 <summary>Список ярчайших галактик</summary>        
-<ol  style="list-style-type: decimal;background-color: lightgreen" 
+<ol id="glist"  style="list-style-type: decimal;background-color: lightgreen" 
     title="Список ярчайших галактик">
 <!--    <li>WLM</li>-->
     <li>NGC55</li>
-    <li>NGC134</li>
+    <li class="hg">NGC134</li>
     <li>NGC147</li>
     <li>NGC157</li>
-    <li>NGC185</li>
+    <li class="hg">NGC185</li>
     <li>NGC205, M110</li>
     <li>NGC221, M32</li>
-    <li>NGC224, M31 </li>
+    <li class="hg">NGC224, M31 </li>
     <li>NGC247</li>
 </ol>
 </details>
-    
+  
+<!-- ol>li.hg-->
      
 <form style="border: azure; border-style: solid; border-width: medium;">
                 

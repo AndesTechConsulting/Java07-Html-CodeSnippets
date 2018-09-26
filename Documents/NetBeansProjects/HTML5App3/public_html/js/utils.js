@@ -1,9 +1,10 @@
 
+
 function getFormData(id_form){
     var form = $(id_form);
     var form_array =form.serializeArray();
     var arr = {};
-    console.log(form_array);
+   // console.log(form_array);
 
     $.map(form_array, function(n, i){
         if(n['name']!=='password'){
@@ -27,6 +28,7 @@ function getFormData2(fm){
     return arr;
 }
 
+
 function saveToLocalStorage(evt){
 
 //    console.log(evt);
@@ -46,6 +48,46 @@ function saveToLocalStorage(evt){
     
 }
 
+
+function validateLogin(evt){
+    console.log('-------- validateLogin ------------'); console.log(evt);
+    var arr3 = getFormData('#' + evt.target.id);
+    var login = arr3["login"]; 
+    var user = localStorage[login];
+    console.log(JSON.parse(user));
+    
+//    if(user!==null && 
+//        MD5(JSON.parse(user).password) === MD5(arr3["password"])    
+//            ) { 
+//        $('#ulogin input[name="password"]').val("***");
+//        console.log("+++ login success!"); }
+//    else{alert("Неверный логин или пароль!!"); return false;}
+ 
+    if(user!==null && 
+        MD5(JSON.parse(user).password) === MD5(arr3["password"])    
+            ) { 
+        console.log("+++ login success!"); 
+        $.cookie("loginOk", login, {expires:1});
+        location = "home.html" }
+    else{alert("Неверный логин или пароль!!");}
+    
+    return false;
+}
+
+function logout(event)
+{
+    $.removeCookie("loginOk");
+    alert("Вы успешно вышли из системы.");
+    location = "index.html";
+}
+
+
+$(document).ready(function(){
+ 
+ var login = $.cookie("loginOk");  if(!login)  return;
+ $("<header title='up'> Вы зашли как  " + login  + ".</header>").prependTo('#doc');
+
+});
 
 var MD5 = function (d) {
     result = M(V(Y(X(d), 8 * d.length)));

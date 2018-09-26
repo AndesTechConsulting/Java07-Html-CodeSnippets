@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/mystyles1.css" rel="stylesheet" type="text/css"/>
         <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+        <script src="js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="js/utils.js" type="text/javascript"></script>
     </head>
    
-    <body>
+    <body id="doc">
+        
         <h1 class="shadow" id="mainTitle" style="color: #0f0f0A;">Это тестовый сайт.</h1>
         <h1 class="shadow" >Знакомство с разметкой html.</h1>
 <!--        <div>TODO write content</div>-->
-        <code >
-            
-            
-        </code>
+       
 <details class="slider-wrapper">
 <summary>Список ярчайших галактик</summary>        
 <ol id="glist"  style="list-style-type: decimal;background-color: lightgreen" 
@@ -84,15 +84,14 @@ price: <span id="rng"> </span> <br/>
     </fieldset>
 </form>-->
 
+<div id="sub"></div>
+        <script> $("#sub").load("menu_sub.html"); </script>
 
-<footer title="menu" style="background-color: lightblue;">
-<p/>
-<nav>
-<div>
-    <a href="http://www.google.com">goo</a>
+
+     <a href="http://www.google.com">goo</a>
      <a href="http://www.microsoft.com" target="_blank">ms</a>
-     <a href="newcustomer.html" >Новый пользователь</a>
-     <a href="login.html" >login</a>
+     
+     
      <input type="button" value='Greets1' 
             onclick="alert('Hi!')">
      <input type="button" value='Greets2' 
@@ -101,9 +100,7 @@ price: <span id="rng"> </span> <br/>
             onclick="alert('Привет!')">
      <input type="button" value='Greets4' 
             onclick="alert('How do you do?!')">
-</div>
-</nav>
-</footer>
+
         
 </body>
 

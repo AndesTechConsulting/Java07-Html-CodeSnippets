@@ -35,6 +35,14 @@ table#table_new_user td.labels {
   text-align: right;
 }
 
+header, footer {
+    
+  background-color: lightblue;}
+
+footer a{
+    margin: 4px;
+}
+
 fieldset{
    border-radius: 10px; 
    width: 350px; 

@@ -45,7 +45,7 @@ function saveToLocalStorage(evt){
     }
     else{
         localStorage.setItem(login, JSON.stringify(arr2));}
-    
+        alert("User  " + login + " created ok!" );
 }
 
 

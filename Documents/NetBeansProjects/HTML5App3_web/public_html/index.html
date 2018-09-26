@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title class="hg">Test web </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/mystyles1.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+        <script src="js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="js/utils.js" type="text/javascript"></script>
+    </head>
+   
+    <body id="doc">
+        
+        <h1 class="shadow" id="mainTitle" style="color: #0f0f0A;">Это тестовый сайт.</h1>
+        <h1 class="shadow" >Знакомство с разметкой html.</h1>
+<!--        <div>TODO write content</div>-->
+       
+<details class="slider-wrapper">
+<summary>Список ярчайших галактик</summary>        
+<ol id="glist"  style="list-style-type: decimal;background-color: lightblue" 
+    title="Список ярчайших галактик">
+<!--    <li>WLM</li>-->
+    <li>NGC55</li>
+    <li class="hg">NGC134</li>
+    <li>NGC147</li>
+    <li>NGC157</li>
+    <li class="hg">NGC185</li>
+    <li>NGC205, M110</li>
+    <li>NGC221, M32</li>
+    <li class="hg">NGC224, M31 </li>
+    <li>NGC247</li>
+</ol>
+</details>
+  
+
+     
+<form style="border: azure; border-style: solid; border-width: medium;">
+                
+slider test: <span id="rng"> </span> <br/>
+0<input class="slider-wrapper" type="range"  step="5" min="0" max="250" value="10" id="price" name="price" 
+                        onchange="document.getElementById('rng').textContent = document.getElementById('price').value"
+                        />250
+ </form>
+
+
+
+<div id="sub"></div>
+        <script> $("#sub").load("menu_sub.html"); </script>
+
+
+</body>
+
+</html>
